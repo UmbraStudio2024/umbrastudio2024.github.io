@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="js/cuestionario.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Prueba gatitos">  
+        <title>Prueba gatitos</title>
+        <style>
+            body {
+                color: #2c2b3d;
+                background-color: #CFD8DC;
+            }        
+            .card {
+                box-shadow: 0px 8px 16px 4px #9E9E9E;
+                margin: 30px;
+            }        
+            .alternativa{
+                margin: 10;
+            }        
+            .pop{
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+                width: 100%;         
+            }
+        </style>
+    </head> 
+    <body>
+        <!--Cuestionario-->
+        <div class="pop" id="cuestionario">
+            <div class="w3-container text-center" id="txtPregunta">
+                <h2 class="mt-1 ml-2">Texto pregunta</h2>
+            </div>
+            <div class="row d-flex justify-content-center px-3">
+                <div class="card">
+                    <img src="images/p1.png" id="imgPregunta"></img>
+                </div>
+            </div>
+            <div class="text-center">
+                <div class="alternativa"><button type="button" class=" btn-sm btn-outline-primary text-center"><h4>Alternativa 0</h4></button></div>
+                <div class="alternativa"><button type="button" class=" btn-sm btn-outline-primary text-center"><h4>Alternativa 1</h4></button></div>
+            </div>
+        </div>
+        <!--Resultados-->
+        <div class="pop" id="resultados">
+            <div class="row d-flex justify-content-center px-3">
+                <div class="card">
+                    <img src="images/r1.png" id="imgResultado"></img>
+                </div>
+            </div>
+            <div class="w3-container text-center" id="txtResultado">
+                <h2 class="mt-1 ml-2">Texto resultado</h2>
+            </div>
+        </div>
+    </body>
+</html>
