@@ -1,10 +1,10 @@
-// Variables
+// 8 Variables en orden
+// Introversión  (Introvert)
+// Extraversión  (Extravert)
 // Sensación     (Sensing)
-// Intuición     (Intuitive)
+// Intuición     (iNtuitive)
 // Pensamiento   (Thinking)
 // Sentimiento   (Feeling)
-// Extraversión  (Extravert)
-// Introversión  (Introvert)
 // Juicio        (Juding)
 // Percepción    (Percieving)
 
@@ -66,17 +66,71 @@ function mostrarResultado()
     resultados.style.display = "block";
 
     // Cálculo variables
+    var textoPersonalidad = "";
 
+    // Introversión  (Introvert)
+    // Extraversión  (Extravert)
+    if(resultadosVariables[0] > resultadosVariables[1])
+    {        
+        textoPersonalidad += "I";
+    }
+    else
+    {        
+        textoPersonalidad += "E";
+    }
 
+    // Sensación     (Sensing)
+    // Sentimiento   (Feeling)
+    if(resultadosVariables[2] > resultadosVariables[3])
+    {        
+        textoPersonalidad += "S";
+    }
+    else
+    {        
+        textoPersonalidad += "F";
+    }
+    
+    // Pensamiento   (Thinking)
+    // Sentimiento   (Feeling)
+    if(resultadosVariables[4] > resultadosVariables[5])
+    {        
+        textoPersonalidad += "T";
+    }
+    else
+    {        
+        textoPersonalidad += "F";
+    }
 
+    // Juicio        (Juding)
+    // Percepción    (Percieving)
+    if(resultadosVariables[6] > resultadosVariables[7])
+    {        
+        textoPersonalidad += "J";
+    }
+    else
+    {        
+        textoPersonalidad += "P";
+    }
+
+    // Encuentra por nombre
+    var personalidad = 0;
+    for (var i = 0; i < personalidades.length; i++)
+    {
+        if(textoPersonalidad == personalidades[personalidad].nombre)
+            personalidad = i;
+    }
+    
     var txtResultado = document.getElementById('txtResultado');
-    txtResultado.innerHTML = '<h2 class="pregunta mt-1 ml-2">' + preguntas[indice].pregunta + '</h2>';
+    txtResultado.innerHTML = '<h2 class="pregunta mt-1 ml-2">' + personalidades[personalidad].nombre + '</h2>';
+
+    var txtDescripciónResultado = document.getElementById('txtDescripciónResultado');
+    txtDescripciónResultado.innerHTML = '<h2 class="pregunta mt-1 ml-2">' + personalidades[personalidad].descripción + '</h2>';
 
     var imgResultado = document.getElementById('imgResultado');
-    imgResultado.src = preguntas[indice].imagen;
+    imgResultado.src = personalidades[personalidad].imagen;
 };
 
-// 14 preguntar con sus variables
+// 14 preguntas con sus variables
 var preguntas =
 [
     {
@@ -89,8 +143,8 @@ var preguntas =
         ],
         variables:
         [
-            [1, 0, 0, 0, 0, 0, 0, 0],   // SENSACION
-            [0, 1, 0, 0, 0, 0, 0, 1]    // INTUICION - PERCEPCION
+            [0, 0, 1, 0, 0, 0, 0, 0],   // SENSACIÓN
+            [0, 0, 0, 1, 0, 0, 0, 1]    // INTUICION - PERCEPCIÓN
         ]
     },
     {
@@ -103,8 +157,8 @@ var preguntas =
         ],
         variables:
         [
-            [0, 0, 0, 1, 0, 0, 0, 0],   // SENTIMIENTO
-            [0, 0, 1, 0, 0, 0, 1, 0]    // PENSAMIENTO - JUICIO
+            [0, 0, 0, 0, 0, 1, 0, 0],   // SENTIMIENTO
+            [0, 0, 0, 0, 1, 0, 1, 0]    // PENSAMIENTO - JUICIO
         ]
     },
     {
@@ -117,8 +171,8 @@ var preguntas =
         ],
         variables:
         [
-            [0, 0, 0, 1, 0, 0, 0, 1],   // SENTIMIENTO - PERCEPCION
-            [0, 0, 1, 0, 0, 0, 0, 0]    // PENSAMIENTO
+            [0, 0, 0, 0, 0, 1, 0, 1],   // SENTIMIENTO - PERCEPCIÓN
+            [0, 0, 0, 0, 1, 0, 0, 0]    // PENSAMIENTO
         ]
     },
     {
@@ -131,8 +185,8 @@ var preguntas =
         ],
         variables:
         [
-            [0, 0, 0, 0, 1, 0, 0, 0],   // EXTRAVERSION
-            [0, 0, 0, 0, 0, 1, 0, 0]    // INTROVERSION
+            [0, 1, 0, 0, 0, 0, 0, 0],   // EXTRAVERSION
+            [1, 0, 0, 0, 0, 0, 0, 0]    // INTROVERSIÓN
         ]
     },
     {
@@ -145,8 +199,8 @@ var preguntas =
         ],
         variables:
         [
-            [0, 0, 1, 0, 0, 0, 0, 1],   // PENSAMIENTO - PERCEPCION
-            [0, 0, 0, 1, 0, 0, 0, 0]    // SENTIMIENTO
+            [0, 0, 0, 0, 1, 0, 0, 1],   // PENSAMIENTO - PERCEPCIÓN
+            [0, 0, 0, 0, 0, 1, 0, 0]    // SENTIMIENTO
         ]
     },
     {
@@ -159,8 +213,8 @@ var preguntas =
         ],
         variables:
         [
-            [1, 0, 0, 0, 0, 0, 1, 0],   // SENSACION - JUICIO
-            [0, 1, 0, 0, 0, 0, 0, 0]    // INTUICION
+            [0, 0, 1, 0, 0, 0, 1, 0],   // SENSACIÓN - JUICIO
+            [0, 0, 0, 0, 0, 0, 0, 0]    // INTUICION
         ]
     },
     {
@@ -173,8 +227,8 @@ var preguntas =
         ],
         variables:
         [
-            [0, 1, 0, 0, 0, 0, 0, 0],   // INTUICION
-            [1, 0, 0, 0, 0, 0, 0, 0]    // SENSACION
+            [0, 0, 0, 1, 0, 0, 0, 0],   // INTUICION
+            [0, 0, 1, 0, 0, 0, 0, 0]    // SENSACIÓN
         ]
     },
     {
@@ -187,8 +241,8 @@ var preguntas =
         ],
         variables:
         [
-            [0, 0, 0, 0, 1, 0, 0, 0],   // EXTRAVERSION
-            [0, 0, 0, 0, 0, 1, 0, 1]    // INTROVERSION - PERCEPCION
+            [0, 0, 0, 0, 0, 0, 0, 0],   // EXTRAVERSIÓN
+            [1, 0, 0, 0, 0, 0, 0, 1]    // INTROVERSIÓN - PERCEPCIÓN
         ]
     },
     {
@@ -201,8 +255,8 @@ var preguntas =
         ],
         variables:
         [
-            [1, 0, 0, 0, 0, 0, 0, 1],   // SENSACION - PERCEPCION
-            [0, 1, 0, 0, 0, 0, 1, 0]    // INTUICION - JUICIO
+            [0, 0, 1, 0, 0, 0, 0, 1],   // SENSACIÓN - PERCEPCIÓN
+            [0, 0, 0, 1, 0, 0, 1, 0]    // INTUICION - JUICIO
         ]
     },
     {
@@ -215,8 +269,8 @@ var preguntas =
         ],
         variables:
         [
-            [0, 0, 0, 0, 1, 0, 0, 0],   // EXTRAVERSION
-            [0, 0, 0, 0, 0, 1, 0, 0]    // INTROVERSION
+            [0, 1, 0, 0, 0, 0, 0, 0],   // EXTRAVERSION
+            [1, 0, 0, 0, 0, 0, 0, 0]    // INTROVERSIÓN
         ]
     },
     {
@@ -229,8 +283,8 @@ var preguntas =
         ],
         variables:
         [
-            [0, 0, 0, 0, 1, 0, 0, 0],   // EXTRAVERSION
-            [0, 0, 0, 1, 0, 1, 0, 0]    // INTROVERSION - SENTIMIENTO
+            [0, 1, 0, 0, 0, 0, 0, 0],   // EXTRAVERSION
+            [1, 0, 0, 0, 0, 1, 0, 0]    // INTROVERSIÓN - SENTIMIENTO
         ]
     },
     {
@@ -243,8 +297,8 @@ var preguntas =
         ],
         variables:
         [
-            [0, 1, 0, 0, 0, 0, 0, 0],   // INTUICION
-            [1, 0, 0, 0, 0, 0, 0, 0]    // SENSACION 
+            [0, 0, 0, 1, 0, 0, 0, 0],   // INTUICION
+            [0, 0, 1, 0, 0, 0, 0, 0]    // SENSACIÓN 
         ]
     },
     {
@@ -257,8 +311,8 @@ var preguntas =
         ],
         variables:
         [
-            [0, 0, 1, 0, 0, 0, 1, 0],   // PENSAMIENTO - JUICIO
-            [0, 0, 0, 1, 0, 0, 0, 0]    // SENTIMIENTO
+            [0, 0, 0, 0, 1, 0, 1, 0],   // PENSAMIENTO - JUICIO
+            [0, 0, 0, 0, 0, 1, 0, 0]    // SENTIMIENTO
         ]
     },
     {
@@ -271,8 +325,93 @@ var preguntas =
         ],
         variables:
         [
-            [0, 0, 1, 0, 0, 0, 0, 0],   // PENSAMIENTO
-            [0, 0, 0, 1, 0, 0, 0, 1]    // SENTIMIENTO - PERCEPCION
+            [0, 0, 0, 0, 1, 0, 0, 0],   // PENSAMIENTO
+            [0, 0, 0, 0, 0, 1, 0, 1]    // SENTIMIENTO - PERCEPCIÓN
         ]
+    }
+];
+
+// 16 personalidades
+var personalidades =
+[
+    {
+        nombre: "ESTJ",
+        descripción: "r1",
+        imagen: "images/r1.png"
+    },
+    {
+        nombre: "ISTJ",
+        descripción: "r2",
+        imagen: "images/r2.png"
+    },
+    {
+        nombre: "ENTJ",
+        descripción: "r3",
+        imagen: "images/r3.png"
+    },
+    {
+        nombre: "INTJ",
+        descripción: "r4",
+        imagen: "images/r4.png"
+    },
+    {
+        nombre: "ESFJ",
+        descripción: "r5",
+        imagen: "images/r5.png"
+    },
+    {
+        nombre: "ISFJ",
+        descripción: "r6",
+        imagen: "images/r6.png"
+    },
+    {
+        nombre: "ENFJ",
+        descripción: "r7",
+        imagen: "images/r7.png"
+    },
+    {
+        nombre: "INFJ",
+        descripción: "r8",
+        imagen: "images/r8.png"
+    },
+    {
+        nombre: "ESTP",
+        descripción: "r9",
+        imagen: "images/r9.png"
+    },
+    {
+        nombre: "ISTP",
+        descripción: "r10",
+        imagen: "images/r10.png"
+    },
+    {
+        nombre: "ENTP",
+        descripción: "r11",
+        imagen: "images/r11.png"
+    },
+    {
+        nombre: "INTP",
+        descripción: "r12",
+        imagen: "images/r12.png"
+    },
+    {
+        nombre: "ESFP",
+        descripción: "r13",
+        imagen: "images/r13.png"
+    },
+    {
+        nombre: "ISFP",
+        descripción: "r14",
+        imagen: "images/r14.png"
+    },
+    {
+        nombre: "ENFP",
+        descripción: "r15",
+        imagen: "images/r15.png"
+    },
+    {
+        nombre: "INFP",
+        descripción: "r16",
+        imagen: "images/r16.png"
     }
 ];
