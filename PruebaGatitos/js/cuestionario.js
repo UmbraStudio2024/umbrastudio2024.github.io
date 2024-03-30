@@ -44,6 +44,9 @@ function responderPregunta(variables)
 
 function actualizarContenido(indice)
 {
+    var txtNúmero = document.getElementById('txtNúmero');
+    txtNúmero.innerHTML = '<p class="pregunta mt-1 ml-2">' + (indice + 1) + ' / 14</p>';
+
     var txtPregunta = document.getElementById('txtPregunta');
     txtPregunta.innerHTML = '<h2 class="pregunta mt-1 ml-2">' + preguntas[indice].pregunta + '</h2>';
 
@@ -80,14 +83,14 @@ function mostrarResultado()
     }
 
     // Sensación     (Sensing)
-    // Sentimiento   (Feeling)
+    // Intuición     (iNtuitive)
     if(resultadosVariables[2] > resultadosVariables[3])
     {        
         textoPersonalidad += "S";
     }
     else
     {        
-        textoPersonalidad += "F";
+        textoPersonalidad += "N";
     }
     
     // Pensamiento   (Thinking)
@@ -116,8 +119,10 @@ function mostrarResultado()
     var personalidad = 0;
     for (var i = 0; i < personalidades.length; i++)
     {
-        if(textoPersonalidad == personalidades[personalidad].nombre)
+        if(textoPersonalidad == personalidades[i].nombre)
+        {
             personalidad = i;
+        }
     }
     
     var txtResultado = document.getElementById('txtResultado');
@@ -134,7 +139,7 @@ function mostrarResultado()
 var preguntas =
 [
     {
-        pregunta: "1/14. Acabas de despertar, todos duermen en casa. Tu primer pensamiento es:",
+        pregunta: "Acabas de despertar, todos duermen en casa. Tu primer pensamiento es:",
         imagen: "images/p1.png",
         alternativas:
         [
@@ -148,7 +153,7 @@ var preguntas =
         ]
     },
     {
-        pregunta: "2/14. Tu Karen(cio) aún duerme",
+        pregunta: "Tu Karen(cio) aún duerme",
         imagen: "images/p1.png",
         alternativas:       
         [
@@ -162,7 +167,7 @@ var preguntas =
         ]
     },
     {
-        pregunta: "3/14. Estás en la cima de tu rascador y miras hacia el horizonte",
+        pregunta: "Estás en la cima de tu rascador y miras hacia el horizonte",
         imagen: "images/p1.png",
         alternativas:
         [
@@ -176,7 +181,7 @@ var preguntas =
         ]
     },
     {
-        pregunta: "4/14. Te encontraste con tu michi amigo apenas bajas del rascador",
+        pregunta: "Te encontraste con tu michi amigo apenas bajas del rascador",
         imagen: "images/p1.png",
         alternativas:
         [
@@ -190,7 +195,7 @@ var preguntas =
         ]
     },
     {
-        pregunta: "5/14.  Karen(cio) se levantó y tiene una caja entre las manos, es un nuevo rascador de piso",
+        pregunta: "Karen(cio) se levantó y tiene una caja entre las manos, es un nuevo rascador de piso",
         imagen: "images/p1.png",
         alternativas:
         [
@@ -204,7 +209,7 @@ var preguntas =
         ]
     },
     {
-        pregunta: "6/14. Las sorpresas no acaban, Karen(cio) te muestra dos juguetes nuevos, uno en cada mano",
+        pregunta: "Las sorpresas no acaban, Karen(cio) te muestra dos juguetes nuevos, uno en cada mano",
         imagen: "images/p1.png",
         alternativas:
         [
@@ -218,7 +223,7 @@ var preguntas =
         ]
     },
     {
-        pregunta: "7/14. Es tu momento de hacerte aseo",
+        pregunta: "Es tu momento de hacerte aseo",
         imagen: "images/p1.png",
         alternativas:
         [
@@ -232,7 +237,7 @@ var preguntas =
         ]
     },
     {
-        pregunta: "8/14. Tu michi amigo está sobre un árbol y te invita a subir",
+        pregunta: "Tu michi amigo está sobre un árbol y te invita a subir",
         imagen: "images/p1.png",
         alternativas:
         [
@@ -246,7 +251,7 @@ var preguntas =
         ]
     },
     {
-        pregunta: "9/14. En el camino de vuelta a casa te encuentras con una pelota de color amarillo",
+        pregunta: "En el camino de vuelta a casa te encuentras con una pelota de color amarillo",
         imagen: "images/p1.png",
         alternativas:
         [
@@ -260,7 +265,7 @@ var preguntas =
         ]
     },
     {
-        pregunta: "10/14. Llegaron visitas a tu casa sin previo aviso",
+        pregunta: "Llegaron visitas a tu casa sin previo aviso",
         imagen: "images/p1.png",
         alternativas:
         [
@@ -274,7 +279,7 @@ var preguntas =
         ]
     },
     {
-        pregunta: "11/14. Las visitas tratas de acercarte a ti para mimarte",
+        pregunta: "Las visitas tratas de acercarte a ti para mimarte",
         imagen: "images/p1.png",
         alternativas:
         [
@@ -288,7 +293,7 @@ var preguntas =
         ]
     },
     {
-        pregunta: "12/14. Ya se fueron las visitas y es momento del paseo con tu Karen(cio)",
+        pregunta: "Ya se fueron las visitas y es momento del paseo con tu Karen(cio)",
         imagen: "images/p1.png",
         alternativas:
         [
@@ -302,7 +307,7 @@ var preguntas =
         ]
     },
     {
-        pregunta: "13/14. El paseo se acabó y es momento de volver",
+        pregunta: "El paseo se acabó y es momento de volver",
         imagen: "images/p1.png",
         alternativas:
         [
@@ -316,7 +321,7 @@ var preguntas =
         ]
     },
     {
-        pregunta: "14/14. Es hora de dormir, tu Karen(cio) está en su cama, agotada(o) por el día de trabajo",
+        pregunta: "Es hora de dormir, tu Karen(cio) está en su cama, agotada(o) por el día de trabajo",
         imagen: "images/p1.png",
         alternativas:
         [
