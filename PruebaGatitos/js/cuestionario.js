@@ -1,3 +1,15 @@
+// Variables
+// Sensación     (Sensing)
+// Intuición     (Intuitive)
+// Pensamiento   (Thinking)
+// Sentimiento   (Feeling)
+// Extraversión  (Extravert)
+// Introversión  (Introvert)
+// Juicio        (Juding)
+// Percepción    (Percieving)
+
+var resultadosVariables = [0, 0, 0, 0, 0, 0, 0, 0];
+
 // Inicialización
 var preguntaActual = 0;
 window.onload = function()
@@ -11,8 +23,14 @@ window.onload = function()
     actualizarContenido(preguntaActual);
 };
 
-function siguientePregunta(indice)
+function responderPregunta(variables)
 {
+    // Suma variables
+    for (var i = 0; i < variables.length; i++)
+    {
+        resultadosVariables[i] += parseInt(variables[i]);
+    }
+
     preguntaActual ++;
     if (preguntaActual < preguntas.length)
     {
@@ -35,7 +53,7 @@ function actualizarContenido(indice)
     var alternativasDivs = document.querySelectorAll('.alternativa');
     for (var i = 0; i < alternativasDivs.length; i++)
     {
-        alternativasDivs[i].innerHTML = '<button type="button" class="btn-sm btn-outline-primary text-center" onclick="siguientePregunta(' + indice + ')"><h4>' + preguntas[indice].alternativas[i] + '</h4></button>';
+        alternativasDivs[i].innerHTML = '<button type="button" class="btn-sm btn-outline-primary text-center" onclick="responderPregunta(' + JSON.stringify(preguntas[indice].variables[i]) + ')"><h4>' + preguntas[indice].alternativas[i] + '</h4></button>';
     }
 };
 
@@ -66,8 +84,13 @@ var preguntas =
         imagen: "images/p1.png",
         alternativas:
         [
-            "Hoy viviré una nueva aventura.",                                                           // SENSACION
-            "Un día igual que ayer, igual que mañana"                                                   // INTUICION - PERCEPCION
+            "Hoy viviré una nueva aventura.",
+            "Un día igual que ayer, igual que mañana"
+        ],
+        variables:
+        [
+            [1, 0, 0, 0, 0, 0, 0, 0],   // SENSACION
+            [0, 1, 0, 0, 0, 0, 0, 1]    // INTUICION - PERCEPCION
         ]
     },
     {
@@ -75,8 +98,13 @@ var preguntas =
         imagen: "images/p1.png",
         alternativas:       
         [
-            "Le despertaré a lengüetazos ya hay que desayunar",                                         // SENTIMIENTO
-            "Mejor le dejaré dormir, puedo ir a tomar solcito por mientras"                             // PENSAMIENTO - JUICIO
+            "Le despertaré a lengüetazos ya hay que desayunar",
+            "Mejor le dejaré dormir, puedo ir a tomar solcito por mientras"
+        ],
+        variables:
+        [
+            [0, 0, 0, 1, 0, 0, 0, 0],   // SENTIMIENTO
+            [0, 0, 1, 0, 0, 0, 1, 0]    // PENSAMIENTO - JUICIO
         ]
     },
     {
@@ -84,8 +112,13 @@ var preguntas =
         imagen: "images/p1.png",
         alternativas:
         [
-            "Solo piensas en tomar solcito y descansar un poco",                                        // SENTIMIENTO
-            "Te imaginas yendo a las casas hasta donde llega tu mirada"                                 // PENSAMIENTO
+            "Solo piensas en tomar solcito y descansar un poco",
+            "Te imaginas yendo a las casas hasta donde llega tu mirada"
+        ],
+        variables:
+        [
+            [0, 0, 0, 1, 0, 0, 0, 1],   // SENTIMIENTO - PERCEPCION
+            [0, 0, 1, 0, 0, 0, 0, 0]    // PENSAMIENTO
         ]
     },
     {
@@ -93,8 +126,13 @@ var preguntas =
         imagen: "images/p1.png",
         alternativas:
         [
-            "Sueles comenzar la conversación",                                                          // EXTRAVERSION
-            "Esperas que el michi hable primero"                                                        // INTROVERSION
+            "Sueles comenzar la conversación",
+            "Esperas que el michi hable primero"
+        ],
+        variables:
+        [
+            [0, 0, 0, 0, 1, 0, 0, 0],   // EXTRAVERSION
+            [0, 0, 0, 0, 0, 1, 0, 0]    // INTROVERSION
         ]
     },
     {
@@ -102,8 +140,13 @@ var preguntas =
         imagen: "images/p1.png",
         alternativas:
         [
-            "Lo observas detenidamente, ¿qué huele?,se ve algo extraño, ¿es amigo o enemigo?",          // PENSAMIENTO - PERCEPCION
-            "Te rascas las garritas como si no hubiera un mañana"                                       // SENTIMIENTO
+            "Lo observas detenidamente, ¿qué huele?,se ve algo extraño, ¿es amigo o enemigo?",
+            "Te rascas las garritas como si no hubiera un mañana"
+        ],
+        variables:
+        [
+            [0, 0, 1, 0, 0, 0, 0, 1],   // PENSAMIENTO - PERCEPCION
+            [0, 0, 0, 1, 0, 0, 0, 0]    // SENTIMIENTO
         ]
     },
     {
@@ -111,8 +154,13 @@ var preguntas =
         imagen: "images/p1.png",
         alternativas:
         [
-            "Miras ambos y eliges el que más te gusta",                                                 // SENSACION - JUICIO
-            "No lo piensas, solo eliges el primero que viste"                                           // INTUICION
+            "Miras ambos y eliges el que más te gusta",
+            "No lo piensas, solo eliges el primero que viste"
+        ],
+        variables:
+        [
+            [1, 0, 0, 0, 0, 0, 1, 0],   // SENSACION - JUICIO
+            [0, 1, 0, 0, 0, 0, 0, 0]    // INTUICION
         ]
     },
     {
@@ -120,8 +168,13 @@ var preguntas =
         imagen: "images/p1.png",
         alternativas:
         [
-            "Lo haces a la hora y en el lugar de siempre",                                              // INTUICION
-            "Cualquier lugar y cualquier momento es bueno para ello"                                    // SENSACION
+            "Lo haces a la hora y en el lugar de siempre",
+            "Cualquier lugar y cualquier momento es bueno para ello"
+        ],
+        variables:
+        [
+            [0, 1, 0, 0, 0, 0, 0, 0],   // INTUICION
+            [1, 0, 0, 0, 0, 0, 0, 0]    // SENSACION
         ]
     },
     {
@@ -129,8 +182,13 @@ var preguntas =
         imagen: "images/p1.png",
         alternativas:
         [
-            "Te motivas y vas con él sin dudarlo",                                                      // EXTRAVERSION
-            "Demasiado agotador, prefieres ir a tu cama a descansar"                                    // INTROVERSION - PERCEPCION
+            "Te motivas y vas con él sin dudarlo",
+            "Demasiado agotador, prefieres ir a tu cama a descansar"
+        ],
+        variables:
+        [
+            [0, 0, 0, 0, 1, 0, 0, 0],   // EXTRAVERSION
+            [0, 0, 0, 0, 0, 1, 0, 1]    // INTROVERSION - PERCEPCION
         ]
     },
     {
@@ -138,8 +196,13 @@ var preguntas =
         imagen: "images/p1.png",
         alternativas:
         [
-            "Confías en tu experiencia, es inofensivo, puedo jugar con eso",                            // SENSACION - PERCEPCION
-            "Confías en tu intuición, podría venir su dueño a reclamarlo y salir lastimado"             // INTUICION - JUICIO
+            "Confías en tu experiencia, es inofensivo, puedo jugar con eso",
+            "Confías en tu intuición, podría venir su dueño a reclamarlo y salir lastimado"
+        ],
+        variables:
+        [
+            [1, 0, 0, 0, 0, 0, 0, 1],   // SENSACION - PERCEPCION
+            [0, 1, 0, 0, 0, 0, 1, 0]    // INTUICION - JUICIO
         ]
     },
     {
@@ -147,8 +210,13 @@ var preguntas =
         imagen: "images/p1.png",
         alternativas:
         [
-            "Te acercas a la gente a compartir y juguetear",                                            // EXTRAVERSION
-            "Simplemente te vas, quieres soledad y tranquilidad"                                        // INTROVERSION
+            "Te acercas a la gente a compartir y juguetear",
+            "Simplemente te vas, quieres soledad y tranquilidad"
+        ],
+        variables:
+        [
+            [0, 0, 0, 0, 1, 0, 0, 0],   // EXTRAVERSION
+            [0, 0, 0, 0, 0, 1, 0, 0]    // INTROVERSION
         ]
     },
     {
@@ -156,8 +224,13 @@ var preguntas =
         imagen: "images/p1.png",
         alternativas:
         [
-            "Permites que ellos se acerquen sin tener miedo",                                           // EXTRAVERSION
-            "Tienes puesto un pie en el acelerador, en cualquier momento sales corriendo"               // INTROVERSION/p/14
+            "Permites que ellos se acerquen sin tener miedo",
+            "Tienes puesto un pie en el acelerador, en cualquier momento sales corriendo"
+        ],
+        variables:
+        [
+            [0, 0, 0, 0, 1, 0, 0, 0],   // EXTRAVERSION
+            [0, 0, 0, 1, 0, 1, 0, 0]    // INTROVERSION - SENTIMIENTO
         ]
     },
     {
@@ -165,8 +238,13 @@ var preguntas =
         imagen: "images/p1.png",
         alternativas:
         [
-            "Prefieres los mismos lugares y hacer lo mismo",                                            // INTUICION
-            "Te gustaría que fueran a un lugar nuevo, nuevas emociones y sensaciones"                   // SENSACION 
+            "Prefieres los mismos lugares y hacer lo mismo",
+            "Te gustaría que fueran a un lugar nuevo, nuevas emociones y sensaciones"
+        ],
+        variables:
+        [
+            [0, 1, 0, 0, 0, 0, 0, 0],   // INTUICION
+            [1, 0, 0, 0, 0, 0, 0, 0]    // SENSACION 
         ]
     },
     {
@@ -174,8 +252,13 @@ var preguntas =
         imagen: "images/p1.png",
         alternativas:
         [
-            "Ya es momento de volver, es parte del plan",                                               // PENSAMIENTO - JUICIO
-            "Haces tiempo, el clima está agradable, no quieres volver aun"                              // SENTIMIENTO
+            "Ya es momento de volver, es parte del plan",
+            "Haces tiempo, el clima está agradable, no quieres volver aun"
+        ],
+        variables:
+        [
+            [0, 0, 1, 0, 0, 0, 1, 0],   // PENSAMIENTO - JUICIO
+            [0, 0, 0, 1, 0, 0, 0, 0]    // SENTIMIENTO
         ]
     },
     {
@@ -183,8 +266,13 @@ var preguntas =
         imagen: "images/p1.png",
         alternativas:
         [
-            "Le das su espacio, que ocupe toda la cama si quiere",                                     // PENSAMIENTO
-            "Necesita un poquito de amor, te acuestas en su regazo"                                    // SENTIMIENTO - PERCEPCION
+            "Le das su espacio, que ocupe toda la cama si quiere",
+            "Necesita un poquito de amor, te acuestas en su regazo"
+        ],
+        variables:
+        [
+            [0, 0, 1, 0, 0, 0, 0, 0],   // PENSAMIENTO
+            [0, 0, 0, 1, 0, 0, 0, 1]    // SENTIMIENTO - PERCEPCION
         ]
     }
 ];
