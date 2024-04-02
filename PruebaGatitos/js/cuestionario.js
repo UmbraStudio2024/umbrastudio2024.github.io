@@ -126,7 +126,7 @@ function mostrarResultado()
     }
     
     var txtResultado = document.getElementById('txtResultado');
-    txtResultado.innerHTML = '<h2 class="pregunta mt-1 ml-2">' + personalidades[personalidad].nombre + '</h2>';
+    txtResultado.innerHTML = '<h2 class="pregunta mt-1 ml-2">' + personalidades[personalidad].nombreGato + '</h2>';
 
     var txtDescripciónResultado = document.getElementById('txtDescripciónResultado');
     txtDescripciónResultado.innerHTML = '<h2 class="pregunta mt-1 ml-2">' + personalidades[personalidad].descripción + '</h2>';
@@ -341,82 +341,98 @@ var personalidades =
 [
     {
         nombre: "ESTJ",
-        descripción: "r1",
+        nombreGato: "Gato Burmés",
+        descripción: "El Gato Burmés es una combinación fascinante de cualidades que lo hacen un compañero felino activo, enérgico y social. Este gato exhibe rasgos que lo hacen curioso, comunicativo, pero también un tanto dominante en su búsqueda de atención. Es una combinación única de curiosidad, energía, comunicación constante, socialización activa y dominancia en su búsqueda de atención. Es un compañero felino activo y enérgico que trae vitalidad y alegría a cualquier hogar, aunque puede requerir un manejo cuidadoso para satisfacer sus necesidades de atención y estimulación.",
         imagen: "images/r1.png"
     },
     {
         nombre: "ISTJ",
-        descripción: "r2",
+        nombreGato: "Gato Balinés",
+        descripción: "El Gato Balinés con personalidad es una mezcla fascinante de rasgos que lo hacen un compañero felino leal y confiable. Este gato exhibe cualidades que lo hacen inteligente, sociable pero selectivamente independiente y enfocado en su dueño principal. Es una combinación única de fidelidad, inteligencia, sociabilidad selectiva, necesidad de ser el centro de atención y dificultad para convivir con otros animales. Es un compañero felino leal y confiable que brinda amor y compañía a su dueño principal, pero puede requerir atención especial en entornos con múltiples mascotas.",
         imagen: "images/r2.png"
     },
     {
         nombre: "ENTJ",
-        descripción: "r3",
+        nombreGato: "Gato Siamés",
+        descripción: "El Gato Siamés es una mezcla intrigante de características que lo hacen destacar en el reino felino. Exhibe cualidades que lo distinguen como un compañero felino líder y comunicativo. Es una combinación única de afectuosidad, comunicación hábil, confianza, determinación y liderazgo. Es un compañero felino carismático y seguro de sí mismo que deja una impresión duradera en aquellos que tienen el privilegio de compartir su vida con él.",
         imagen: "images/r3.png"
     },
     {
         nombre: "INTJ",
-        descripción: "r4",
+        nombreGato: "Gato Siberiano",
+        descripción: "El Gato Siberiano se caracteriza por ser una combinación única de rasgos que hacen de él un compañero felino fascinante y peculiar. Es una mezcla intrigante de inteligencia, tranquilidad, selectividad social y juguetona seriedad. Es un compañero felino que ofrece una combinación única de cualidades que lo hacen fascinante para aquellos que aprecian su singularidad.",
         imagen: "images/r4.png"
     },
     {
         nombre: "ESFJ",
-        descripción: "r5",
+        nombreGato: "Gato Snowshoe",
+        descripción: "El Gato Snowshoe es una mezcla encantadora de serenidad, sociabilidad y amabilidad que lo convierte en un compañero felino excepcionalmente agradable y adaptable. Este gato exhibe rasgos que lo hacen tranquilo, social y cariñoso. Es una combinación única de tranquilidad, sociabilidad, adaptabilidad, empatía y deseo de paz y armonía. Es un compañero felino amable, amoroso y compasivo que brinda alegría y calidez a cualquier hogar que tenga la suerte de compartir con él.",
         imagen: "images/r5.png"
     },
     {
         nombre: "ISFJ",
-        descripción: "r6",
+        nombreGato: "Gato Ruso Azul",
+        descripción: "El Gato Ruso Azul es una combinación cautivadora de cualidades que lo convierten en un compañero felino amable, leal y afectuoso. Este gato exhibe rasgos que lo hacen inteligente, tímido pero cariñoso, y dedicado a sus dueños. Es una combinación única de inteligencia, timidez inicial, lealtad, necesidad de atención y sensibilidad. Es un compañero felino cariñoso y devoto que brinda amor y compañía incondicional a sus seres queridos, convirtiéndose en una parte invaluable de su hogar y familia.",
         imagen: "images/r6.png"
     },
     {
         nombre: "ENFJ",
-        descripción: "r7",
+        nombreGato: "Gato Cartujo",
+        descripción: "El Gato Cartujo es una combinación excepcional de cualidades que lo convierten en un compañero felino verdaderamente especial. Este gato exhibe rasgos que lo hacen afectuoso, tranquilo y adaptativo. Es una combinación única de adaptabilidad, afectuosidad, tranquilidad, vínculo familiar fuerte, sociabilidad y empatía. Es un compañero felino excepcionalmente especial que brinda amor, calma y conexión emocional a aquellos que tienen el privilegio de compartir su vida con él.",
         imagen: "images/r7.png"
     },
     {
         nombre: "INFJ",
-        descripción: "r8",
+        nombreGato: "Gato Don Sphynx",
+        descripción: "El Gato Don Sphynx es una combinación única de rasgos que lo distinguen como un compañero felino excepcionalmente especial. Este gato exhibe cualidades que lo hacen sereno, compasivo y afectuoso. Es una combinación única de tranquilidad, sociabilidad compasiva, afectuosidad demandante, empatía y sensibilidad. Es un compañero felino excepcionalmente especial que brinda amor, apoyo y conexión emocional a aquellos que tienen el privilegio de compartir su vida con él.",
         imagen: "images/r8.png"
     },
     {
         nombre: "ESTP",
-        descripción: "r9",
+        nombreGato: "Gato Bengalí",
+        descripción: "El Gato Bengalí es una combinación fascinante de cualidades que lo hacen un compañero felino audaz, curioso y lleno de energía. Este gato exhibe rasgos que reflejan su naturaleza aventurera, independiente y activa. Es una combinación única de curiosidad, audacia, independencia, juego como actividad principal y adaptabilidad. Es un compañero felino emocionante y lleno de energía que brinda vitalidad y emoción a cualquier hogar que tenga el privilegio de compartir con él.",
         imagen: "images/r9.png"
     },
     {
         nombre: "ISTP",
-        descripción: "r10",
+        nombreGato: "Gato Bosque de Noruega",
+        descripción: "El Gato Bosque de Noruega es una combinación única de rasgos que lo hacen un compañero felino intrépido, independiente y astuto. Este gato exhibe características que reflejan su naturaleza exploradora, adaptable y lógica. Es una combinación única de curiosidad, independencia, inteligencia, aventura, pragmatismo y lógica. Es un compañero felino fascinante que aporta vitalidad y exploración a cualquier hogar que tenga el privilegio de compartir con él.",
         imagen: "images/r10.png"
     },
     {
         nombre: "ENTP",
-        descripción: "r11",
+        nombreGato: "Gato Angora Turco",
+        descripción: "El Gato Angora Turco es una fascinante combinación de cualidades que lo hacen destacar en el mundo felino. Exhibe rasgos que lo convierten en un compañero felino encantador y versátil. Es una combinación única de inteligencia, comunicación expresiva, juguetonería, tolerancia y adaptabilidad. Es un compañero felino encantador y versátil que aporta alegría y vitalidad a cualquier hogar en el que se encuentre",
         imagen: "images/r11.png"
     },
     {
         nombre: "INTP",
-        descripción: "r12",
+        nombreGato: "Gato Savannah",
+        descripción: "El Gato Savannah es una fascinante combinación de rasgos que lo distinguen como un compañero felino único y cautivador. Es una combinación única de inteligencia, lealtad, curiosidad, independencia y adaptabilidad. Es un compañero felino excepcional que ofrece una experiencia gratificante para aquellos que valoran su singularidad y su capacidad para aprender y adaptarse",
         imagen: "images/r12.png"
     },
     {
         nombre: "ESFP",
-        descripción: "r13",
+        nombreGato: "Gato americano de pelo corto",
+        descripción: "El Gato americano de pelo corto es una mezcla encantadora de cualidades que lo convierten en un compañero felino sociable, divertido y en busca de aventuras. Este gato exhibe rasgos que reflejan su naturaleza extrovertida, juguetona y enérgica. Es una combinación única de sociabilidad, diversión, aventura, sensibilidad emocional y necesidad de interacción y afecto. Es un compañero felino cariñoso y enérgico que brinda alegría y vitalidad a cualquier hogar que tenga el privilegio de compartir con él.",
         imagen: "images/r13.png"
     },
     {
         nombre: "ISFP",
-        descripción: "r14",
+        nombreGato: "Gato Bombay",
+        descripción: "El Gato Bombay con personalidad es una mezcla encantadora de cualidades que lo hacen un compañero felino cariñoso, Este gato exhibe rasgos que reflejan su naturaleza emocional, aventurera y sensible. Es una combinación única de curiosidad, cariño, energía, aventura y necesidad de expresión creativa. Es un compañero felino encantador y emocionante que brinda alegría y vitalidad a cualquier hogar que tenga el privilegio de compartir con él.",
         imagen: "images/r14.png"
     },
     {
         nombre: "ENFP",
-        descripción: "r15",
+        nombreGato: "Gato Británico de Pelo Corto Azul",
+        descripción: "El Gato Británico de Pelo Corto Azul es una combinación encantadora de cualidades que lo hacen un compañero felino verdaderamente especial. Este gato exhibe rasgos que lo hacen afectuoso, amigable e independiente. Es una combinación única de afectuosidad, amistad sin prejuicios, independencia equilibrada, curiosidad y aventura, energía y vitalidad. Es un compañero felino encantador y divertido que brinda alegría y calidez a aquellos que tienen el privilegio de compartir su vida con él.",
         imagen: "images/r15.png"
     },
     {
         nombre: "INFP",
-        descripción: "r16",
+        nombreGato: "Gato Abisinio",
+        descripción: "El Gato Abisinio es una combinación intrigante de cualidades que lo hacen único en el mundo felino. Este gato exhibe rasgos que lo hacen ser sensible, independiente y adaptable. Es una combinación única de sensibilidad, actividad, independencia, posible agresividad y adaptabilidad. Es un compañero felino fascinante que ofrece una conexión emocional profunda y una energía contagiosa a aquellos que tienen el privilegio de compartir su vida con él.",
         imagen: "images/r16.png"
     }
 ];
