@@ -2,6 +2,7 @@
 <html lang="es">
     <head>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
         <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
         <script src="js/cuestionario.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,12 +15,13 @@
                 color: whitesmoke;
                 font-size: 20px;
             }
-            .card {
+            .carta {
                 box-shadow: 0px 8px 16px 4px #9E9E9E;
-                margin: 30px;
+                margin-top: 80px;
+                margin-bottom: 30px;
             }        
             .alternativa{
-                margin: 10;
+                margin: 10px;
             }
             .columna {
                 float: left;
@@ -40,6 +42,9 @@
                 content: "";
                 display: table;
                 clear: both;
+            }
+            .text-center {
+                width: 100%;
             }
 
             @media screen and (max-width: 600px) {
@@ -84,13 +89,13 @@
                 <!--Cuestionario-->    
                 <div id="cuestionario">
                     <div class="w3-container text-center" id="txtNúmero">
-                        <p class="mt-1 ml-2">0 / 14</p>
+                        <p>0 / 14</p>
                     </div>
                     <div class="w3-container text-center" id="txtPregunta">
-                        <h2 class="mt-1 ml-2">Texto pregunta</h2>
+                        <h2>Texto pregunta</h2>
                     </div>
                     <div class="row d-flex justify-content-center px-3">
-                        <div class="card">
+                        <div class="carta">
                             <img src="images/p1.png" id="imgPregunta"></img>
                         </div>
                     </div>
@@ -103,15 +108,15 @@
                 <!--Resultados-->
                 <div id="resultados">
                     <div class="w3-container text-center" id="txtResultado">
-                        <h2 class="mt-1 ml-2">Texto resultado</h2>
+                        <h2>Texto resultado</h2>
                     </div>
                     <div class="row d-flex justify-content-center px-3">
-                        <div class="card">
+                        <div class="carta">
                             <img src="images/r1.png" id="imgResultado"></img>
                         </div>
                     </div>
                     <div class="w3-container text-center" id="txtDescripciónResultado">
-                        <h2 class="mt-1 ml-2">Texto descripción resultado</h2>
+                        <p>Texto descripción resultado</p>
                     </div>
                 </div>
                 
