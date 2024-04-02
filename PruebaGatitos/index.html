@@ -2,10 +2,7 @@
 <html lang="es">
     <head>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="js/cuestionario.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Prueba gatitos">  
@@ -13,9 +10,9 @@
         <title>Prueba gatitos</title>
         <style>
             body {
-                color: #2c2b3d;
-                background-color: #CFD8DC;
-                font-size: 22px;
+                background-color:#101e26;
+                color: whitesmoke;
+                font-size: 20px;
             }
             .card {
                 box-shadow: 0px 8px 16px 4px #9E9E9E;
@@ -23,14 +20,6 @@
             }        
             .alternativa{
                 margin: 10;
-            }
-            .pop{
-                position: fixed;
-                top: 40%;
-                left: 50%;
-                -webkit-transform: translate(-50%, -50%);
-                transform: translate(-50%, -50%);
-                width: 100%;         
             }
             .columna {
                 float: left;
@@ -47,7 +36,6 @@
                 width: 60%;
                 text-align: center;
             }
-
             .fila:after {
                 content: "";
                 display: table;
@@ -91,8 +79,10 @@
 
             <!--Página-->
             <div class="columna centro">
+                <p><br></p>
+                
                 <!--Cuestionario-->    
-                <div class="pop" id="cuestionario">
+                <div id="cuestionario">
                     <div class="w3-container text-center" id="txtNúmero">
                         <p class="mt-1 ml-2">0 / 14</p>
                     </div>
@@ -111,7 +101,7 @@
                 </div>
 
                 <!--Resultados-->
-                <div class="pop" id="resultados">
+                <div id="resultados">
                     <div class="w3-container text-center" id="txtResultado">
                         <h2 class="mt-1 ml-2">Texto resultado</h2>
                     </div>
@@ -128,6 +118,7 @@
                 <p><br></p><p><br></p>
                 
                 <!--Publicidad-->
+                <p>Publicidad abajo</p>
                 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5345597955731369" crossorigin="anonymous"></script>
                 <!-- Horizontal -->
                 <ins class="adsbygoogle"
