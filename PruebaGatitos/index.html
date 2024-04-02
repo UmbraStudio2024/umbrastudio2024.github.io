@@ -15,6 +15,7 @@
             body {
                 color: #2c2b3d;
                 background-color: #CFD8DC;
+                font-size: 22px;
             }
             .card {
                 box-shadow: 0px 8px 16px 4px #9E9E9E;
@@ -31,6 +32,38 @@
                 transform: translate(-50%, -50%);
                 width: 100%;         
             }
+            .columna {
+                float: left;
+            }
+            .izquierda {
+                width: 20%;
+                text-align: left;
+            }
+            .derecha {
+                width: 20%;
+                text-align: right;
+            }
+            .centro {
+                width: 60%;
+                text-align: center;
+            }
+
+            .fila:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+            @media screen and (max-width: 600px) {
+                .izquierda, .derecha {
+                    visibility: hidden;
+                    display: none;
+                    clear: both;
+                }
+                .centro {
+                    width: 100%;
+                }
+            }
         </style>
         
         <!--Publicidad-->
@@ -38,36 +71,92 @@
         crossorigin="anonymous"></script>
     </head> 
     <body>
-        <!--Cuestionario-->
-        <div class="pop" id="cuestionario">
-            <div class="w3-container text-center" id="txtNúmero">
-                <p class="mt-1 ml-2">0 / 14</p>
+        <div class="fila">
+            <!--Publicidad-->
+            <div class="columna izquierda">
+                <p>Publicidad izquierda</p>
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5345597955731369" crossorigin="anonymous"></script>
+                <!-- Vertical -->
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="ca-pub-5345597955731369"
+                    data-ad-slot="1699571738"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true">
+                </ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
             </div>
-            <div class="w3-container text-center" id="txtPregunta">
-                <h2 class="mt-1 ml-2">Texto pregunta</h2>
-            </div>
-            <div class="row d-flex justify-content-center px-3">
-                <div class="card">
-                    <img src="images/p1.png" id="imgPregunta"></img>
+
+            <!--Página-->
+            <div class="columna centro">
+                <!--Cuestionario-->    
+                <div class="pop" id="cuestionario">
+                    <div class="w3-container text-center" id="txtNúmero">
+                        <p class="mt-1 ml-2">0 / 14</p>
+                    </div>
+                    <div class="w3-container text-center" id="txtPregunta">
+                        <h2 class="mt-1 ml-2">Texto pregunta</h2>
+                    </div>
+                    <div class="row d-flex justify-content-center px-3">
+                        <div class="card">
+                            <img src="images/p1.png" id="imgPregunta"></img>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="alternativa"><button type="button" class=" btn-sm btn-outline-primary text-center"><h4>Alternativa 0</h4></button></div>
+                        <div class="alternativa"><button type="button" class=" btn-sm btn-outline-primary text-center"><h4>Alternativa 1</h4></button></div>
+                    </div>
                 </div>
-            </div>
-            <div class="text-center">
-                <div class="alternativa"><button type="button" class=" btn-sm btn-outline-primary text-center"><h4>Alternativa 0</h4></button></div>
-                <div class="alternativa"><button type="button" class=" btn-sm btn-outline-primary text-center"><h4>Alternativa 1</h4></button></div>
-            </div>
-        </div>
-        <!--Resultados-->
-        <div class="pop" id="resultados">
-            <div class="w3-container text-center" id="txtResultado">
-                <h2 class="mt-1 ml-2">Texto resultado</h2>
-            </div>
-            <div class="row d-flex justify-content-center px-3">
-                <div class="card">
-                    <img src="images/r1.png" id="imgResultado"></img>
+
+                <!--Resultados-->
+                <div class="pop" id="resultados">
+                    <div class="w3-container text-center" id="txtResultado">
+                        <h2 class="mt-1 ml-2">Texto resultado</h2>
+                    </div>
+                    <div class="row d-flex justify-content-center px-3">
+                        <div class="card">
+                            <img src="images/r1.png" id="imgResultado"></img>
+                        </div>
+                    </div>
+                    <div class="w3-container text-center" id="txtDescripciónResultado">
+                        <h2 class="mt-1 ml-2">Texto descripción resultado</h2>
+                    </div>
                 </div>
+                
+                <p><br></p><p><br></p>
+                
+                <!--Publicidad-->
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5345597955731369" crossorigin="anonymous"></script>
+                <!-- Horizontal -->
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="ca-pub-5345597955731369"
+                    data-ad-slot="4960159897"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true">
+                </ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
             </div>
-            <div class="w3-container text-center" id="txtDescripciónResultado">
-                <h2 class="mt-1 ml-2">Texto descripción resultado</h2>
+        
+            <!--Publicidad-->            
+            <div class="columna derecha">
+                <p>Publicidad derecha</p>
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5345597955731369" crossorigin="anonymous"></script>
+                <!-- Vertical -->
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="ca-pub-5345597955731369"
+                    data-ad-slot="1699571738"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true">
+                </ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
             </div>
         </div>
     </body>
