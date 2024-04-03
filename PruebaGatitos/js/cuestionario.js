@@ -140,7 +140,7 @@ var preguntas =
 [
     {
         pregunta: "Acabas de despertar, todos duermen en casa. Tu primer pensamiento es:",
-        imagen: "images/p1.png",
+        imagen: "images/p1.gif",
         alternativas:
         [
             "Hoy viviré una nueva aventura.",
@@ -154,7 +154,7 @@ var preguntas =
     },
     {
         pregunta: "Tu Karen(cio) aún duerme",
-        imagen: "images/p1.png",
+        imagen: "images/p2.gif",
         alternativas:       
         [
             "Le despertaré a lengüetazos ya hay que desayunar",
@@ -168,7 +168,7 @@ var preguntas =
     },
     {
         pregunta: "Estás en la cima de tu rascador y miras hacia el horizonte",
-        imagen: "images/p1.png",
+        imagen: "images/p3.gif",
         alternativas:
         [
             "Solo piensas en tomar solcito y descansar un poco",
@@ -182,7 +182,7 @@ var preguntas =
     },
     {
         pregunta: "Te encontraste con tu michi amigo apenas bajas del rascador",
-        imagen: "images/p1.png",
+        imagen: "images/p4.gif",
         alternativas:
         [
             "Sueles comenzar la conversación",
@@ -196,7 +196,7 @@ var preguntas =
     },
     {
         pregunta: "Karen(cio) se levantó y tiene una caja entre las manos, es un nuevo rascador de piso",
-        imagen: "images/p1.png",
+        imagen: "images/p5.gif",
         alternativas:
         [
             "Lo observas detenidamente, ¿qué huele?,se ve algo extraño, ¿es amigo o enemigo?",
@@ -210,7 +210,7 @@ var preguntas =
     },
     {
         pregunta: "Las sorpresas no acaban, Karen(cio) te muestra dos juguetes nuevos, uno en cada mano",
-        imagen: "images/p1.png",
+        imagen: "images/p6.gif",
         alternativas:
         [
             "Miras ambos y eliges el que más te gusta",
@@ -224,7 +224,7 @@ var preguntas =
     },
     {
         pregunta: "Es tu momento de hacerte aseo",
-        imagen: "images/p1.png",
+        imagen: "images/p7.gif",
         alternativas:
         [
             "Lo haces a la hora y en el lugar de siempre",
@@ -238,7 +238,7 @@ var preguntas =
     },
     {
         pregunta: "Tu michi amigo está sobre un árbol y te invita a subir",
-        imagen: "images/p1.png",
+        imagen: "images/p8.gif",
         alternativas:
         [
             "Te motivas y vas con él sin dudarlo",
@@ -252,7 +252,7 @@ var preguntas =
     },
     {
         pregunta: "En el camino de vuelta a casa te encuentras con una pelota de color amarillo",
-        imagen: "images/p1.png",
+        imagen: "images/p9.gif",
         alternativas:
         [
             "Confías en tu experiencia, es inofensivo, puedo jugar con eso",
@@ -266,7 +266,7 @@ var preguntas =
     },
     {
         pregunta: "Llegaron visitas a tu casa sin previo aviso",
-        imagen: "images/p1.png",
+        imagen: "images/p10.gif",
         alternativas:
         [
             "Te acercas a la gente a compartir y juguetear",
@@ -280,7 +280,7 @@ var preguntas =
     },
     {
         pregunta: "Las visitas tratas de acercarte a ti para mimarte",
-        imagen: "images/p1.png",
+        imagen: "images/p11.gif",
         alternativas:
         [
             "Permites que ellos se acerquen sin tener miedo",
@@ -294,7 +294,7 @@ var preguntas =
     },
     {
         pregunta: "Ya se fueron las visitas y es momento del paseo con tu Karen(cio)",
-        imagen: "images/p1.png",
+        imagen: "images/p12.gif",
         alternativas:
         [
             "Prefieres los mismos lugares y hacer lo mismo",
@@ -308,7 +308,7 @@ var preguntas =
     },
     {
         pregunta: "El paseo se acabó y es momento de volver",
-        imagen: "images/p1.png",
+        imagen: "images/p13.gif",
         alternativas:
         [
             "Ya es momento de volver, es parte del plan",
@@ -322,7 +322,7 @@ var preguntas =
     },
     {
         pregunta: "Es hora de dormir, tu Karen(cio) está en su cama, agotada(o) por el día de trabajo",
-        imagen: "images/p1.png",
+        imagen: "images/p14.gif",
         alternativas:
         [
             "Le das su espacio, que ocupe toda la cama si quiere",
