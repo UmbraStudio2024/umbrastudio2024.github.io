@@ -129,7 +129,7 @@ function mostrarResultado()
     txtResultado.innerHTML = '<h2 class="pregunta mt-1 ml-2">' + personalidades[personalidad].nombreGato + '</h2>';
 
     var txtDescripciónResultado = document.getElementById('txtDescripciónResultado');
-    txtDescripciónResultado.innerHTML = '<h2 class="pregunta mt-1 ml-2">' + personalidades[personalidad].descripción + '</h2>';
+    txtDescripciónResultado.innerHTML = '<h2 class="descripcion mt-1 ml-2">' + personalidades[personalidad].descripción + '</h2>';
 
     var imgResultado = document.getElementById('imgResultado');
     imgResultado.src = personalidades[personalidad].imagen;
