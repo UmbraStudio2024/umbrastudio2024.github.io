@@ -59,9 +59,9 @@
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/Web.loader.js";
       var config = {
-        dataUrl: buildUrl + "/Web.data.gz",
-        frameworkUrl: buildUrl + "/Web.framework.js.gz",
-        codeUrl: buildUrl + "/Web.wasm.gz",
+        dataUrl: buildUrl + "/Web.data",
+        frameworkUrl: buildUrl + "/Web.framework.js",
+        codeUrl: buildUrl + "/Web.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Umbra",
         productName: "DoctorCompleto",
@@ -98,7 +98,7 @@
         canvas.style.height = "600px";
       }
 
-      canvas.style.background = "url('" + buildUrl + "/Web.jpg.gz') center / cover";
+      canvas.style.background = "url('" + buildUrl + "/Web.jpg') center / cover";
       loadingBar.style.display = "block";
 
       var script = document.createElement("script");
