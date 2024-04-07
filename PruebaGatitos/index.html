@@ -1,182 +1,184 @@
 <!DOCTYPE html>
-<html lang="es">
-    <head>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-        <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
-        <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
-        <script src="js/cuestionario.js"></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Prueba gatitos">  
-        <meta name="google-adsense-account" content="ca-pub-5345597955731369">
-        <title>Prueba gatitos</title>
-        <style>
-            body {
-                background-color:#101e26;
-                color: whitesmoke;
-                font-size: 20px;
-            }
-            .carta {
-                margin-top: 20px;
-                margin-bottom: 20px;
-            }        
-            .alternativa{
-                margin: 10px;
-            }
-            .columna {
-                float: left;
-            }
-            .izquierda {
-                width: 20%;
-                text-align: left;
-            }
-            .derecha {
-                width: 20%;
-                text-align: right;
-            }
-            .centro {
-                width: 60%;
-                text-align: center;
-            }
-            .fila:after {
-                content: "";
-                display: table;
+<html lang="es-cl">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+    <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico">
+    <script src="js/cuestionario.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Umbra Studio">
+    <meta name="description" content="¿Qué michi eres?">
+    <meta name="keywords" content="Umbra Studio, ¿Qué michi eres?, Videojuegos, Chile">
+    <meta name="google-adsense-account" content="ca-pub-5345597955731369">
+    <title>Prueba gatitos</title>
+    <style>
+        body {
+            background-color:#101e26;
+            color: whitesmoke;
+            font-size: 20px;
+        }
+        .carta {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }        
+        .alternativa{
+            margin: 10px;
+        }
+        .columna {
+            float: left;
+        }
+        .izquierda {
+            width: 20%;
+            text-align: left;
+        }
+        .derecha {
+            width: 20%;
+            text-align: right;
+        }
+        .centro {
+            width: 60%;
+            text-align: center;
+        }
+        .fila:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .text-center {
+            width: 100%;
+        }
+        #imgPregunta{
+            width: 50%;
+        }
+        .descripcion
+        {
+            font-size:large;
+            margin: 10px;
+        }
+        .finales
+        {
+            margin: 5px;
+            margin-top:50px
+        }
+        .logo
+        {
+            margin:30px;
+        }
+
+        @media screen and (max-width: 499px) {
+            .izquierda, .derecha {
+                visibility: hidden;
+                display: none;
                 clear: both;
             }
-            .text-center {
+            .centro {
                 width: 100%;
             }
-            #imgPregunta{
-                width: 50%;
-            }
-            .descripcion
-            {
-                font-size:large;
-                margin: 10px;
-            }
-            .finales
-            {
-               margin: 5px;
-               margin-top:50px
-            }
-            .logo
-            {
-                margin:30px;
-            }
-
-            @media screen and (max-width: 499px) {
-                .izquierda, .derecha {
-                    visibility: hidden;
-                    display: none;
-                    clear: both;
-                }
-                .centro {
-                    width: 100%;
-                }
-            }
-        </style>
-        
+        }
+    </style>
+    
+    <!--Publicidad-->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5345597955731369"
+    crossorigin="anonymous"></script>
+</head> 
+<body>
+    <div class="fila">
         <!--Publicidad-->
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5345597955731369"
-        crossorigin="anonymous"></script>
-    </head> 
-    <body>
-        <div class="fila">
-            <!--Publicidad-->
-            <div class="columna izquierda">
-                <p>Publicidad izquierda</p>
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5345597955731369" crossorigin="anonymous"></script>
-                <!-- Vertical -->
-                <ins class="adsbygoogle"
-                    style="display:block"
-                    data-ad-client="ca-pub-5345597955731369"
-                    data-ad-slot="1699571738"
-                    data-ad-format="auto"
-                    data-full-width-responsive="true">
-                </ins>
-                <script>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-            </div>
-
-            <!--Página-->
-            <div class="columna centro">
-                <p><br></p>
-                
-                <!--Cuestionario-->    
-                <div id="cuestionario">
-                    <div class="w3-container text-center" id="txtNúmero">
-                        <p>0 / 14</p>
-                    </div>
-                    <div class="w3-container text-center" id="txtPregunta">
-                        <h2>Texto pregunta</h2>
-                    </div>
-                    <div class="row d-flex justify-content-center px-3">
-                        <div class="carta">
-                            <img src="images/p1.png" id="imgPregunta"></img>
-                        </div>
-                    </div>
-                    <div class="text-center">
-                        <div class="alternativa"><button type="button" class=" btn-sm btn-outline-primary text-center"><h4>Alternativa 0</h4></button></div>
-                        <div class="alternativa"><button type="button" class=" btn-sm btn-outline-primary text-center"><h4>Alternativa 1</h4></button></div>
-                    </div>
-                </div>
-
-                <!--Resultados-->
-                <div id="resultados">
-                    <div class="w3-container text-center" id="txtResultado">
-                        <h2>Texto resultado</h2>
-                    </div>
-                    <div class="row d-flex justify-content-center px-3">
-                        <div class="carta">
-                            <img src="images/r1.png" id="imgResultado"></img>
-                        </div>
-                    </div>
-                    <div class="w3-container text-center" id="txtDescripciónResultado">
-                        <p>Texto descripción resultado</p>
-                    </div>
-                    <div class="text-center">
-                        <button type="button" class="finales btn btn-primary btn-lg">Compartir</button>
-                        <button type="button" class="finales btn btn-primary btn-lg" onclick="location.reload()">Reintentar</button>
-                    </div>
-                    <div class="row d-flex justify-content-center px-3">
-                        <div class="logo"><a href="https://umbrastudio2024.github.io/"><img src="images/logo.png"></img></a></div>
-                    </div>
-                </div>
-                
-                <p><br></p><p><br></p>
-                
-                <!--Publicidad-->
-                <p>Publicidad abajo</p>
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5345597955731369" crossorigin="anonymous"></script>
-                <!-- Horizontal -->
-                <ins class="adsbygoogle"
-                    style="display:block"
-                    data-ad-client="ca-pub-5345597955731369"
-                    data-ad-slot="4960159897"
-                    data-ad-format="auto"
-                    data-full-width-responsive="true">
-                </ins>
-                <script>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-            </div>
-        
-            <!--Publicidad-->            
-            <div class="columna derecha">
-                <p>Publicidad derecha</p>
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5345597955731369" crossorigin="anonymous"></script>
-                <!-- Vertical -->
-                <ins class="adsbygoogle"
-                    style="display:block"
-                    data-ad-client="ca-pub-5345597955731369"
-                    data-ad-slot="1699571738"
-                    data-ad-format="auto"
-                    data-full-width-responsive="true">
-                </ins>
-                <script>
-                    (adsbygoogle = window.adsbygoogle || []).push({});
-                </script>
-            </div>
+        <div class="columna izquierda">
+            <p>Publicidad izquierda</p>
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5345597955731369" crossorigin="anonymous"></script>
+            <!-- Vertical -->
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-5345597955731369"
+                data-ad-slot="1699571738"
+                data-ad-format="auto"
+                data-full-width-responsive="true">
+            </ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
         </div>
-    </body>
+
+        <!--Página-->
+        <div class="columna centro">
+            <p><br></p>
+            
+            <!--Cuestionario-->    
+            <div id="cuestionario">
+                <div class="w3-container text-center" id="txtNúmero">
+                    <p>0 / 14</p>
+                </div>
+                <div class="w3-container text-center" id="txtPregunta">
+                    <h2>Texto pregunta</h2>
+                </div>
+                <div class="row d-flex justify-content-center px-3">
+                    <div class="carta">
+                        <img src="images/p1.png" id="imgPregunta"></img>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="alternativa"><button type="button" class=" btn-sm btn-outline-primary text-center"><h4>Alternativa 0</h4></button></div>
+                    <div class="alternativa"><button type="button" class=" btn-sm btn-outline-primary text-center"><h4>Alternativa 1</h4></button></div>
+                </div>
+            </div>
+
+            <!--Resultados-->
+            <div id="resultados">
+                <div class="w3-container text-center" id="txtResultado">
+                    <h2>Texto resultado</h2>
+                </div>
+                <div class="row d-flex justify-content-center px-3">
+                    <div class="carta">
+                        <img src="images/r1.png" id="imgResultado"></img>
+                    </div>
+                </div>
+                <div class="w3-container text-center" id="txtDescripciónResultado">
+                    <p>Texto descripción resultado</p>
+                </div>
+                <div class="text-center">
+                    <button type="button" class="finales btn btn-primary btn-lg">Compartir</button>
+                    <button type="button" class="finales btn btn-primary btn-lg" onclick="location.reload()">Reintentar</button>
+                </div>
+                <div class="row d-flex justify-content-center px-3">
+                    <div class="logo"><a href="https://umbrastudio2024.github.io/"><img src="../images/logo.png"></img></a></div>
+                </div>
+            </div>
+            
+            <p><br></p><p><br></p>
+            
+            <!--Publicidad-->
+            <p>Publicidad abajo</p>
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5345597955731369" crossorigin="anonymous"></script>
+            <!-- Horizontal -->
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-5345597955731369"
+                data-ad-slot="4960159897"
+                data-ad-format="auto"
+                data-full-width-responsive="true">
+            </ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    
+        <!--Publicidad-->            
+        <div class="columna derecha">
+            <p>Publicidad derecha</p>
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5345597955731369" crossorigin="anonymous"></script>
+            <!-- Vertical -->
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-5345597955731369"
+                data-ad-slot="1699571738"
+                data-ad-format="auto"
+                data-full-width-responsive="true">
+            </ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div>
+</body>
 </html>
