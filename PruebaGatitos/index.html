@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="es-cl">
-<head>
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
     <link rel="shortcut icon" type="image/x-icon" href="../images/favicon.ico">
@@ -14,13 +14,52 @@
     <style>
         body {
             background-color:#101e26;
-            color: whitesmoke;
+            background-image: url("images/fondo.jpg");
+            color:rgb(220, 252, 252);
             font-size: 20px;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
         }
-        .carta {
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }        
+        .carta{
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        .btn-sm{
+            background-image: linear-gradient(to right, #E55D87 0%, #5FC3E4  51%, #E55D87  100%);
+            text-align: center;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color:rgb(220, 252, 252);           
+            box-shadow: 0 0 10px #000000;
+            border-radius: 10px;
+            display: block;
+            text-decoration: none;
+            border: 0px;
+        }
+
+        .btn-sm:hover {
+            background-position: right center; /* change the direction of the change here */
+            color:rgb(220, 252, 252);
+            text-decoration: none;
+          }
+
+          .btn-lg{
+            background-image: linear-gradient(to right, #E55D87 0%, #5FC3E4  51%, #E55D87  100%);
+            text-align: center;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color:rgb(220, 252, 252);         
+            box-shadow: 0 0 10px #000000;
+            border-radius: 10px;
+            border: 0px;
+        }
+
+        .btn-lg:hover {
+            background-position: right center; /* change the direction of the change here */
+            color:rgb(220, 252, 252);
+            text-decoration: none;
+          }
+
         .alternativa{
             margin: 10px;
         }
@@ -50,6 +89,7 @@
         #imgPregunta{
             width: 50%;
         }
+        
         .descripcion
         {
             font-size:large;
@@ -60,9 +100,22 @@
             margin: 5px;
             margin-top:50px
         }
+
+        .finales
+        {
+            margin: 5px;
+            margin-top:50px  
+        }
+
         .logo
         {
             margin:30px;
+        }
+
+        .resultado
+        {
+            height: 50%;
+            width: auto;
         }
         .footer {
             position: fixed;
@@ -72,11 +125,12 @@
             text-align: right;
         }
 
-        @media screen and (max-width: 499px) {
+        @media screen and (max-width: 500px) {
             .izquierda, .derecha {
                 visibility: hidden;
                 display: none;
                 clear: both;
+                width: 100%;
             }
             .centro {
                 width: 100%;
@@ -119,36 +173,36 @@
                 <div class="w3-container text-center" id="txtPregunta">
                     <h2>Texto pregunta</h2>
                 </div>
-                <div class="row d-flex justify-content-center px-3">
-                    <div class="carta">
-                        <img src="images/p1.png" id="imgPregunta"></img>
+                <div class="w3-container text-center">
+                    <div class="justify-content-center">
+                        <img src="images/p1.png" id="imgPregunta">
                     </div>
                 </div>
                 <div class="text-center">
-                    <div class="alternativa"><button type="button" class=" btn-sm btn-outline-primary text-center"><h4>Alternativa 0</h4></button></div>
-                    <div class="alternativa"><button type="button" class=" btn-sm btn-outline-primary text-center"><h4>Alternativa 1</h4></button></div>
+                    <div class="alternativa"><button type="button" class=" btn btn-primary btn-sm"><h4>Alternativa 0</h4></button></div>
+                    <div class="alternativa"><button type="button" class=" btn btn-primary btn-sm"><h4>Alternativa 1</h4></button></div>
                 </div>
             </div>
 
             <!--Resultados-->
             <div id="resultados">
                 <div class="w3-container text-center" id="txtResultado">
-                    <h2>Texto resultado</h2>
+                    <!--<h2>Texto resultado</h2>-->
                 </div>
-                <div class="row d-flex justify-content-center px-3">
-                    <div class="carta">
-                        <img src="images/r1.png" id="imgResultado"></img>
+                <div class="w3-container text-center">
+                    <div class="justify-content-center">
+                        <img src="images/r1.png" id="imgResultado" width="480px">
                     </div>
                 </div>
                 <div class="w3-container text-center" id="txtDescripciónResultado">
-                    <p>Texto descripción resultado</p>
+                    <!--<p>Texto descripción resultado</p>-->
                 </div>
                 <div class="text-center">
-                    <button type="button" class="finales btn btn-primary btn-lg">Compartir</button>
+                    <!--<button type="button" class="finales btn btn-primary btn-lg">Compartir</button>-->
                     <button type="button" class="finales btn btn-primary btn-lg" onclick="location.reload()">Reintentar</button>
                 </div>
-                <div class="row d-flex justify-content-center px-3">
-                    <div class="logo"><a href="https://umbrastudio2024.github.io/"><img src="../images/logo.png" style="width: 200px; height: 200px;"/></a></div>
+                <div class="w3-container text-center">
+                    <div class="logo"><a href="https://umbrastudio2024.github.io/"><img src="images/logo.png" style="width: 200px; height: 200px;"/></a></div>
                 </div>
             </div>
             <p><br></p>
