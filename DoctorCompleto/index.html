@@ -27,7 +27,6 @@
       background-attachment: fixed;
     }
     #footerIzquierdo {
-      text-align: left;
       position: absolute;
       bottom: 20px;
       left: 40px;
@@ -42,6 +41,19 @@
 </head>
 <body>
   <div class="container">
+    
+    <!--Contenido-->
+    <div class="w-50 mx-auto text-center">
+      <p><br/></p>
+      <p><br/></p>
+      <p><br/></p>
+      <p><br/></p>
+      <h2>Doctor Completo</h2>
+      <h4>¡Gestiona tu carrito de completos y atiende a tus famosos clientes!</h4>
+      <p>Doctor Completo es un emocionante juego de gestión y habilidad que te sumerge en el apasionante mundo de la comida rápida, preparando deliciosos completos para satisfacer a tus exigentes clientes.</p>
+      <img src="../assets/img/portfolio/fila_completos.png" width="50%"/>
+    </div>
+
     <!--Juego-->
     <div id="unity-container" class="unity-desktop">
       <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
@@ -126,7 +138,7 @@
 
       var meta = document.createElement('meta');
       meta.name = 'viewport';
-      meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+      meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes, shrink-to-fit=yes';
       document.getElementsByTagName('head')[0].appendChild(meta);
       container.className = "unity-mobile";
       canvas.className = "unity-mobile";
