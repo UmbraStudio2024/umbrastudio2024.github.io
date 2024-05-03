@@ -125,15 +125,13 @@ function mostrarResultado()
         }
     }
     
-
-
-   // var txtResultado = document.getElementById('txtResultado');
+    // var txtResultado = document.getElementById('txtResultado');
     //txtResultado.innerHTML = '<h2 class="pregunta mt-1 ml-2">' + personalidades[personalidad].nombreGato + '</h2>';
 
-   // var txtDescripciónResultado = document.getElementById('txtDescripciónResultado');
+    // var txtDescripciónResultado = document.getElementById('txtDescripciónResultado');
     //txtDescripciónResultado.innerHTML = '<h2 class="descripcion mt-1 ml-2">' + personalidades[personalidad].descripción + '</h2>';
 
-   var imgResultado = document.getElementById('imgResultado');
+    var imgResultado = document.getElementById('imgResultado');
     imgResultado.src = personalidades[personalidad].imagen;
 };
 
