@@ -143,7 +143,7 @@ var preguntas =
         imagen: "images/p1.gif",
         alternativas:
         [
-            "Hoy viviré una nueva aventura.",
+            "Hoy viviré una nueva aventura",
             "Un día igual que ayer, igual que mañana"
         ],
         variables:
