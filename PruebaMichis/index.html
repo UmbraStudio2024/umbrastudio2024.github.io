@@ -13,6 +13,7 @@
 
     <title>¿Qué michi eres?</title>
     <script src="js/cuestionario.js"></script>
+    <link href="assets/css/style.css" rel="stylesheet">
 
     <!-- Publicidad -->
     <meta name="google-adsense-account" content="ca-pub-5345597955731369">
@@ -20,10 +21,8 @@
 
     <style>
         body {
-            background-color:#101e26;
             background-image: url("../assets/img/fondo.jpg");
             color:rgb(220, 252, 252);
-            font-size: 20px;
             background-repeat: no-repeat;
             background-attachment: fixed;
         }
@@ -101,7 +100,7 @@
         <p><br></p>
 
         <!--Cuestionario-->    
-        <div id="cuestionario">
+        <div id="cuestionario" class="container">
             <div class="w3-container text-center" id="txtNúmero">
                 <p>0 / 14</p>
             </div>
@@ -110,9 +109,7 @@
             </div>
             
             <div class="w3-container text-center">
-                <div class="justify-content-center">
-                    <img src="images/p1.png" id="imgPregunta">
-                </div>
+                <img src="images/p1.png" id="imgPregunta" class="img-fluid" alt="">
             </div>
             <div class="text-center">
                 <div class="alternativa"><button type="button" class=" btn btn-primary btn-sm"><h4>Alternativa 0</h4></button></div>
@@ -121,17 +118,16 @@
         </div>
 
         <!--Resultados-->
-        <div id="resultados">
+        <div id="resultados" class="container">
             <!--<div class="w3-container text-center" id="txtResultado"></div>-->
             <!--<div class="w3-container text-center" id="txtDescripciónResultado"></div>-->
             <div class="w3-container text-center"><h4>¿Qué michi eres?</h4></div>
 
-            <div class="w3-container text-center">
-                <div class="justify-content-center">
-                    <img src="images/p1.png" id="imgResultado">
-                </div>
+            <div class="w3-container text-center">                
+                <img src="images/p1.png" id="imgResultado" class="img-fluid" alt="">
             </div>
-            <div class="w3-container text-center">Comparte tu resultado con los hashtag #umbra #michis lorem ipsum dolor sit amet</div>
+            <div class="w3-container text-center">Comparte tu resultado con los hashtag #umbra #michis</div>
+
             <div class="text-center">
                 <button type="button" class="finales btn btn-primary btn-lg" onclick="location.reload()">Reintentar</button>
             </div>
