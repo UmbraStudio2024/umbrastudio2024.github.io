@@ -20,7 +20,7 @@ body {
 body::before {
   content: "";
   position: fixed;
-  background: #040404 url("../img/bg.png") top right no-repeat;
+  background: #040404 url("../img/bg.png") top left no-repeat;
   background-size: cover;
   left: 0;
   right: 0;
@@ -33,6 +33,7 @@ body::before {
   body::before {
     background-attachment: fixed;
   }
+
 }
 
 a {

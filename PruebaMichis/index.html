@@ -21,8 +21,8 @@
 
   <style>
     body {
-      background-image: url("../assets/img/fondo.jpg");
-      color:rgb(220, 252, 252);
+      background-image: url("../assets/img/fondo.png");
+      color:rgb(244, 220, 252);
       background-repeat: no-repeat;
       background-attachment: fixed;
     }
@@ -30,35 +30,38 @@
       margin-top: 30px;
       margin-bottom: 30px;
     }
-    .btn-sm {
-      background-image: linear-gradient(to right, #E55D87 0%, #5FC3E4  51%, #E55D87  100%);
+    .btn-sm{
+      background-image: linear-gradient(to right, #22122e 0%, #62447b  51%, #46285f  100%);
       text-align: center;
       transition: 0.5s;
       background-size: 200% auto;
-      color:rgb(220, 252, 252);       
+      color:rgb(244, 220, 252);       
       box-shadow: 0 0 10px #000000;
       border-radius: 10px;
       display: block;
       text-decoration: none;
       border: 0px;
     }
-    .btn-lg {
-      background-image: linear-gradient(to right, #E55D87 0%, #5FC3E4  51%, #E55D87  100%);
+    
+    .btn-sm:hover {
+      background-position: right center; /* change the direction of the change here */
+      color:rgb(220, 252, 252);
+      text-decoration: none;
+    }
+
+    .btn-lg{
+      background-image: linear-gradient(to right, #22122e 0%, #62447b  51%, #46285f  100%);
       text-align: center;
       transition: 0.5s;
       background-size: 200% auto;
-      color:rgb(220, 252, 252);     
+      color:rgb(244, 220, 252);   
       box-shadow: 0 0 10px #000000;
       border-radius: 10px;
       border: 0px;
     }
-    .btn-sm:hover {
-      background-position: right center; /* Dirección de cambio */
-      color:rgb(220, 252, 252);
-      text-decoration: none;
-    }
-    .btn-lg:hover {
-      background-position: right center; /* Dirección de cambio */
+
+  .btn-lg:hover {
+      background-position: right center; /* change the direction of the change here */
       color:rgb(220, 252, 252);
       text-decoration: none;
     }
@@ -76,8 +79,17 @@
       margin: 5px;
       margin-top:50px
     }
+    #imgResultado
+    {
+    width: 50%;
+    }
+
     .logo {
       margin:30px;
+    }
+
+    .contenedorp{
+      height: 150px;
     }
     .resultado {
       height: 50%;
@@ -90,8 +102,20 @@
       width: 100%;
       text-align: right;
     }
+
+    b
+    {
+      color:aliceblue
+    }
     #imgPregunta {
       width: 50%;
+    }
+    @media screen and (max-width: 500px) {
+
+    #imgResultado
+    {
+    width: 100%;
+    };
     }
   </style>
 </head> 
@@ -106,7 +130,7 @@
       <div class="w3-container text-center" id="txtNúmero">
         <p>1 / 14</p>
       </div>
-      <div class="w3-container text-center" id="txtPregunta">
+      <div class="contenedorp w3-container text-center" id="txtPregunta">
         <h2>Acabas de despertar, todos duermen en casa. Tu primer pensamiento es:</h2>
       </div>
       
@@ -126,9 +150,9 @@
       <div class="w3-container text-center"><h4>¿Qué michi eres?</h4></div>
 
       <div class="w3-container text-center">
-        <img src="images/p1.png" id="imgResultado" class="img-fluid" alt="">
+        <img src="images/p1.png" id="imgResultado" alt="">
       </div>
-      <div class="w3-container text-center">Comparte tu resultado con los hashtag #umbra #michis</div>
+      <div class="w3-container text-center" style="padding: 10px;"><h5>Comparte tu resultado con los hashtag </br> <b>#umbrastudio #quemichieres #personalidadmichi</b></h5></div>
 
       <div class="text-center">
         <button type="button" class="finales btn btn-primary btn-lg" onclick="location.reload()">Reintentar</button>
