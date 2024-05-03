@@ -11,6 +11,7 @@
   <title>Doctor Completo</title>
 
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <link rel="shortcut icon" href="TemplateData/favicon.ico">
   <link rel="stylesheet" href="TemplateData/style.css">
   
@@ -39,31 +40,33 @@
     }
   </style>
 </head>
-<body>    
-  <!--Juego-->
-  <div id="unity-container" class="unity-desktop">
-    <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
-    <div id="unity-loading-bar">
-      <div id="unity-logo"></div>
-      <div id="unity-progress-bar-empty">
-        <div id="unity-progress-bar-full"></div>
+<body>
+  <div class="container">
+    <!--Juego-->
+    <div id="unity-container" class="unity-desktop">
+      <canvas id="unity-canvas" width=960 height=600 tabindex="-1"></canvas>
+      <div id="unity-loading-bar">
+        <div id="unity-logo"></div>
+        <div id="unity-progress-bar-empty">
+          <div id="unity-progress-bar-full"></div>
+        </div>
       </div>
-    </div>
-    <div id="unity-warning"> </div>
-    <div id="unity-footer">
-      <div id="unity-fullscreen-button"></div>
-      <div id="unity-fullscreen-button" style="float: left;"></div>
+      <div id="unity-warning"> </div>
+      <div id="unity-footer">
+        <div id="unity-fullscreen-button"></div>
+        <div id="unity-fullscreen-button-left"></div>
+      </div>
     </div>
   </div>
 
   <!--Footers-->
   <div id="footerIzquierdo">
-    <a href="https://play.google.com/store/apps/details?id=com.Umbra.DoctorCompleto"><img src="../assets/img/google-play-badge.png" style="width:215; height:83px;"></a>
+    <a href="https://play.google.com/store/apps/details?id=com.Umbra.DoctorCompleto" target="_blank"><img src="../assets/img/google-play-badge.png" style="width:215; height:83px;"></a>
   </div>
 
   <div id="footerDerecho">
     <a href="https://umbrastudio2024.github.io" target="_blank"><img src="../assets/img/logo.png" style="display: block; width:128px; height:128px;"></a>
-    <div id="unity-build-title" style="color: #E8E8E8">Umbra Studio <script>document.write(/\d{4}/.exec(Date())[0])</script> </div>
+    <a>Umbra Studio <script>document.write(/\d{4}/.exec(Date())[0])</script> &nbsp;</a>
   </div>
 
   <script>
