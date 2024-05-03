@@ -157,7 +157,7 @@ var preguntas =
         imagen: "images/p2.gif",
         alternativas:       
         [
-            "Le despertaré a lengüetazos ya hay que desayunar",
+            "Le despertaré a lengüetazos, ya hay que desayunar",
             "Mejor le dejaré dormir, puedo ir a tomar solcito por mientras"
         ],
         variables:
@@ -199,7 +199,7 @@ var preguntas =
         imagen: "images/p5.gif",
         alternativas:
         [
-            "Lo observas detenidamente, ¿qué huele?,se ve algo extraño, ¿es amigo o enemigo?",
+            "Lo observas detenidamente. ¿Qué huele? Se ve algo extraño. ¿Es amigo o enemigo?",
             "Te rascas las garritas como si no hubiera un mañana"
         ],
         variables:
@@ -213,7 +213,7 @@ var preguntas =
         imagen: "images/p6.gif",
         alternativas:
         [
-            "Miras ambos y eliges el que más te gusta",
+            "Miras ambos y eliges el que más te guste",
             "No lo piensas, solo eliges el primero que viste"
         ],
         variables:
@@ -256,7 +256,7 @@ var preguntas =
         alternativas:
         [
             "Confías en tu experiencia, es inofensivo, puedo jugar con eso",
-            "Confías en tu intuición, podría venir su dueño a reclamarlo y salir lastimado"
+            "Confías en tu intuición, podría venir su dueño a reclamarlo y lastimarte"
         ],
         variables:
         [
@@ -279,7 +279,7 @@ var preguntas =
         ]
     },
     {
-        pregunta: "Las visitas tratas de acercarte a ti para mimarte",
+        pregunta: "Las visitas tratan de acercarse a ti para mimarte",
         imagen: "images/p11.gif",
         alternativas:
         [
@@ -298,7 +298,7 @@ var preguntas =
         alternativas:
         [
             "Prefieres los mismos lugares y hacer lo mismo",
-            "Te gustaría que fueran a un lugar nuevo, nuevas emociones y sensaciones"
+            "Te gustaría que fuera a un lugar nuevo, nuevas emociones y sensaciones"
         ],
         variables:
         [
@@ -312,7 +312,7 @@ var preguntas =
         alternativas:
         [
             "Ya es momento de volver, es parte del plan",
-            "Haces tiempo, el clima está agradable, no quieres volver aun"
+            "Haces tiempo, el clima está agradable, no quieres volver aún"
         ],
         variables:
         [
